@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-x: hidden;
+}
+
+.inicio{
+    text-align: center;
+    margin: 20px;
+    margin-top: 170px;
+    font-size: 30px;
+}
+
+.conteudo{
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    border: 2px solid #00ffaa;
+    border-radius: 10px;
+    padding: 20px;
+    background: #020b7d;
+    background: linear-gradient(90deg, rgba(2, 11, 125, 1) 0%, rgb(20, 45, 126) 50%, rgb(33, 1, 122) 100%);
+    color: white;
+
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.conteudo.show {
+    opacity: 1;
+    transform: translateY(0);
+}

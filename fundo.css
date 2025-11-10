@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(135deg, #0c0c1a 0%, #1a1a3a 50%, #0c0c1a 100%);
+    font-family: 'Courier New', monospace;
+    color: #00ffaa;
+    height: 100vh;
+    position: relative;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 170, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 170, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.binary-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0.15;
+    color: #00ffaa;
+    font-size: 16px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.hexagon-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://placehold.co/100x100/212131/00ffaa?text=⬡');
+    background-size: 50px 50px;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 255, 170, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.8);
+    animation: scan 8s linear infinite;
+    z-index: 5;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.security-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border: 1px solid #00ffaa;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #00ffaa;
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.corner-decoration {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 4;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+    border-left: 2px solid #00ffaa;
+    border-top: 2px solid #00ffaa;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+    border-right: 2px solid #00ffaa;
+    border-top: 2px solid #00ffaa;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-left: 2px solid #00ffaa;
+    border-bottom: 2px solid #00ffaa;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-right: 2px solid #00ffaa;
+    border-bottom: 2px solid #00ffaa;
+}
+
+.pulse-dots {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+.pulse-dots div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00ffaa;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.pulse-dots div:nth-child(1) {
+    animation: pulse 4s infinite;
+}
+
+.pulse-dots div:nth-child(2) {
+    animation: pulse 4s infinite 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(-50%) scale(2);
+        opacity: 0;
+    }
+}
+
+
