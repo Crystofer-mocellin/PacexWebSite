@@ -1,0 +1,35 @@
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 255, 170, 0.1);
+  border: 1px solid #00ffaa;
+  border-radius: 10px;
+  padding: 15px 10px;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #00ffaa;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar a:hover {
+  color: white;
+  transform: translateX(5px);
+}
